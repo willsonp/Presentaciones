@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //=> equivalente a function
+       // function getUser(){
+            fetch("https://randomuser.me/api")
+                .then(r => r.json())
+                .then(j =>{
+                    var result = j.results[0];
+                    var email = result.email;
+                    var phone = result.phone;
+                    var cell = result.cell;
+                    console.log("Email :",email)
+                    console.log("Cell :",cell)
+                    console.log("Phone: ",phone)
+
+                })
+            .catch(function(e){
+                console.log(e);
+            });
+        //}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
